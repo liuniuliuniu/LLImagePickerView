@@ -28,10 +28,8 @@
     
     UILabel *titleLbl = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, [UIScreen mainScreen].bounds.size.width, 20)];
     titleLbl.text = @"展示区域";
-    [headerV addSubview:titleLbl];
-    
+    [headerV addSubview:titleLbl];    
     LLImagePickerView *pickerV = [[LLImagePickerView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(titleLbl.frame) + 10, [UIScreen mainScreen].bounds.size.width, height)];
-    
     pickerV.showDelete = NO;
     pickerV.showAddButton = NO;
     // png jpg gif 
@@ -48,15 +46,14 @@
     
     [pickerV observeSelectedMediaArray:^(NSArray<LLImagePickerModel *> *list) {
         for (LLImagePickerModel *model in list) {
-            
             // 在这里取到模型的数据
+            NSLog(@"%@",model.imageUrlString);
         }
     }];
     [headerV addSubview:pickerV];
     headerV.frame = CGRectMake(0, 0, self.view.frame.size.width, CGRectGetMaxY(pickerV.frame));
     self.tableView.tableHeaderView = headerV;
 }
-
 
 - (IBAction)editAction:(UIBarButtonItem *)sender {
     UIBarButtonItem *bar = (UIBarButtonItem *)sender;

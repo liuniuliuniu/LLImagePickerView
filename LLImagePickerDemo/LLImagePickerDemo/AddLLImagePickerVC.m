@@ -23,8 +23,7 @@
     LLImagePickerView *pickerV = [[LLImagePickerView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, height)];
     pickerV.type = LLImageTypePhoto;
     pickerV.allowMultipleSelection = YES;
-    self.tableView.tableHeaderView = pickerV;
-    
+    self.tableView.tableHeaderView = pickerV;    
     [pickerV observeSelectedMediaArray:^(NSArray<LLImagePickerModel *> *list) {
         NSLog(@"%@",list);
     }];    

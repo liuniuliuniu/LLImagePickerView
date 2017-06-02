@@ -221,6 +221,7 @@
 				TargetAttributes = {
 					D21F30511EDFE2270043C94B = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5KVUAK8MDB;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -445,7 +446,9 @@
 			baseConfigurationReference = 61389281DE6C303292F13E0E /* Pods-LLImagePickerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5KVUAK8MDB;
 				INFOPLIST_FILE = LLImagePickerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = liushaohua.LLImagePickerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -457,7 +460,9 @@
 			baseConfigurationReference = 8FB393344354E24C39FE7764 /* Pods-LLImagePickerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5KVUAK8MDB;
 				INFOPLIST_FILE = LLImagePickerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = liushaohua.LLImagePickerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
