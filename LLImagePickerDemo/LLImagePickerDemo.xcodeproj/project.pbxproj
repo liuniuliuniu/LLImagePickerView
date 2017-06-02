@@ -7,15 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7FBACAA9DBF0140C7AC2AE0B /* Pods_LLImagePickerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34249E1FCD3DFE5CFE8C4FA /* Pods_LLImagePickerDemo.framework */; };
 		D21F30571EDFE2270043C94B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D21F30561EDFE2270043C94B /* main.m */; };
 		D21F305A1EDFE2270043C94B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D21F30591EDFE2270043C94B /* AppDelegate.m */; };
 		D21F305D1EDFE2270043C94B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D21F305C1EDFE2270043C94B /* ViewController.m */; };
 		D21F30601EDFE2270043C94B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D21F305E1EDFE2270043C94B /* Main.storyboard */; };
 		D21F30621EDFE2270043C94B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D21F30611EDFE2270043C94B /* Assets.xcassets */; };
 		D21F30651EDFE2270043C94B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D21F30631EDFE2270043C94B /* LaunchScreen.storyboard */; };
+		D21F30701EDFECA00043C94B /* UIViewController+LLMediaExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D21F306F1EDFECA00043C94B /* UIViewController+LLMediaExt.m */; };
+		D21F30731EDFECED0043C94B /* NSString+LLMediaExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D21F30721EDFECED0043C94B /* NSString+LLMediaExt.m */; };
+		D21F30761EDFED950043C94B /* UIView+LLMediaExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D21F30751EDFED950043C94B /* UIView+LLMediaExt.m */; };
+		D21F30791EDFEDE50043C94B /* UIImageView+LLMediaExt.m in Sources */ = {isa = PBXBuildFile; fileRef = D21F30781EDFEDE50043C94B /* UIImageView+LLMediaExt.m */; };
+		D21F307C1EDFFCAE0043C94B /* UIImage+LLGif.m in Sources */ = {isa = PBXBuildFile; fileRef = D21F307B1EDFFCAE0043C94B /* UIImage+LLGif.m */; };
+		D21F307E1EDFFE870043C94B /* LLImagePicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D21F307D1EDFFE870043C94B /* LLImagePicker.bundle */; };
+		D21F30831EE002A80043C94B /* LLImagePickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D21F30821EE002A80043C94B /* LLImagePickerModel.m */; };
+		D21F30861EE003320043C94B /* LLImagePickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D21F30851EE003320043C94B /* LLImagePickerManager.m */; };
+		D21F30891EE009F80043C94B /* LLImagePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D21F30881EE009F80043C94B /* LLImagePickerCell.m */; };
+		D21F308C1EE00BB90043C94B /* LLImagePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D21F308B1EE00BB90043C94B /* LLImagePickerView.m */; };
+		D21F308F1EE02C520043C94B /* AddLLImagePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D21F308E1EE02C520043C94B /* AddLLImagePickerVC.m */; };
+		D21F30921EE02F6E0043C94B /* DisplayLLImagePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D21F30911EE02F6E0043C94B /* DisplayLLImagePickerVC.m */; };
+		D21F309F1EE1002D0043C94B /* EditLLImagePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D21F309E1EE1002D0043C94B /* EditLLImagePickerVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61389281DE6C303292F13E0E /* Pods-LLImagePickerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLImagePickerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LLImagePickerDemo/Pods-LLImagePickerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		8FB393344354E24C39FE7764 /* Pods-LLImagePickerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLImagePickerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LLImagePickerDemo/Pods-LLImagePickerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C34249E1FCD3DFE5CFE8C4FA /* Pods_LLImagePickerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LLImagePickerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D21F30521EDFE2270043C94B /* LLImagePickerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLImagePickerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D21F30561EDFE2270043C94B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D21F30581EDFE2270043C94B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +43,33 @@
 		D21F30611EDFE2270043C94B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D21F30641EDFE2270043C94B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D21F30661EDFE2270043C94B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D21F306E1EDFECA00043C94B /* UIViewController+LLMediaExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LLMediaExt.h"; sourceTree = "<group>"; };
+		D21F306F1EDFECA00043C94B /* UIViewController+LLMediaExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LLMediaExt.m"; sourceTree = "<group>"; };
+		D21F30711EDFECED0043C94B /* NSString+LLMediaExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LLMediaExt.h"; sourceTree = "<group>"; };
+		D21F30721EDFECED0043C94B /* NSString+LLMediaExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LLMediaExt.m"; sourceTree = "<group>"; };
+		D21F30741EDFED950043C94B /* UIView+LLMediaExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LLMediaExt.h"; sourceTree = "<group>"; };
+		D21F30751EDFED950043C94B /* UIView+LLMediaExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LLMediaExt.m"; sourceTree = "<group>"; };
+		D21F30771EDFEDE50043C94B /* UIImageView+LLMediaExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LLMediaExt.h"; sourceTree = "<group>"; };
+		D21F30781EDFEDE50043C94B /* UIImageView+LLMediaExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LLMediaExt.m"; sourceTree = "<group>"; };
+		D21F307A1EDFFCAE0043C94B /* UIImage+LLGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LLGif.h"; sourceTree = "<group>"; };
+		D21F307B1EDFFCAE0043C94B /* UIImage+LLGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LLGif.m"; sourceTree = "<group>"; };
+		D21F307D1EDFFE870043C94B /* LLImagePicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LLImagePicker.bundle; sourceTree = "<group>"; };
+		D21F307F1EDFFF570043C94B /* LLImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLImagePicker.h; sourceTree = "<group>"; };
+		D21F30801EDFFFCF0043C94B /* LLImagePickerConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLImagePickerConst.h; sourceTree = "<group>"; };
+		D21F30811EE002A80043C94B /* LLImagePickerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLImagePickerModel.h; sourceTree = "<group>"; };
+		D21F30821EE002A80043C94B /* LLImagePickerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLImagePickerModel.m; sourceTree = "<group>"; };
+		D21F30841EE003320043C94B /* LLImagePickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLImagePickerManager.h; sourceTree = "<group>"; };
+		D21F30851EE003320043C94B /* LLImagePickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLImagePickerManager.m; sourceTree = "<group>"; };
+		D21F30871EE009F80043C94B /* LLImagePickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLImagePickerCell.h; sourceTree = "<group>"; };
+		D21F30881EE009F80043C94B /* LLImagePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLImagePickerCell.m; sourceTree = "<group>"; };
+		D21F308A1EE00BB90043C94B /* LLImagePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLImagePickerView.h; sourceTree = "<group>"; };
+		D21F308B1EE00BB90043C94B /* LLImagePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLImagePickerView.m; sourceTree = "<group>"; };
+		D21F308D1EE02C520043C94B /* AddLLImagePickerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLLImagePickerVC.h; sourceTree = "<group>"; };
+		D21F308E1EE02C520043C94B /* AddLLImagePickerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLLImagePickerVC.m; sourceTree = "<group>"; };
+		D21F30901EE02F6E0043C94B /* DisplayLLImagePickerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayLLImagePickerVC.h; sourceTree = "<group>"; };
+		D21F30911EE02F6E0043C94B /* DisplayLLImagePickerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayLLImagePickerVC.m; sourceTree = "<group>"; };
+		D21F309D1EE1002C0043C94B /* EditLLImagePickerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditLLImagePickerVC.h; sourceTree = "<group>"; };
+		D21F309E1EE1002D0043C94B /* EditLLImagePickerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditLLImagePickerVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +77,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FBACAA9DBF0140C7AC2AE0B /* Pods_LLImagePickerDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BE4BF14D18711448FADFEC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				61389281DE6C303292F13E0E /* Pods-LLImagePickerDemo.debug.xcconfig */,
+				8FB393344354E24C39FE7764 /* Pods-LLImagePickerDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		721FD8D49A52459DC2A77A81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C34249E1FCD3DFE5CFE8C4FA /* Pods_LLImagePickerDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D21F30491EDFE2270043C94B = {
 			isa = PBXGroup;
 			children = (
+				D21F306C1EDFEAEA0043C94B /* LLImagePicker */,
 				D21F30541EDFE2270043C94B /* LLImagePickerDemo */,
 				D21F30531EDFE2270043C94B /* Products */,
+				3BE4BF14D18711448FADFEC2 /* Pods */,
+				721FD8D49A52459DC2A77A81 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,9 +125,15 @@
 			children = (
 				D21F30581EDFE2270043C94B /* AppDelegate.h */,
 				D21F30591EDFE2270043C94B /* AppDelegate.m */,
+				D21F305E1EDFE2270043C94B /* Main.storyboard */,
 				D21F305B1EDFE2270043C94B /* ViewController.h */,
 				D21F305C1EDFE2270043C94B /* ViewController.m */,
-				D21F305E1EDFE2270043C94B /* Main.storyboard */,
+				D21F308D1EE02C520043C94B /* AddLLImagePickerVC.h */,
+				D21F308E1EE02C520043C94B /* AddLLImagePickerVC.m */,
+				D21F30901EE02F6E0043C94B /* DisplayLLImagePickerVC.h */,
+				D21F30911EE02F6E0043C94B /* DisplayLLImagePickerVC.m */,
+				D21F309D1EE1002C0043C94B /* EditLLImagePickerVC.h */,
+				D21F309E1EE1002D0043C94B /* EditLLImagePickerVC.m */,
 				D21F30611EDFE2270043C94B /* Assets.xcassets */,
 				D21F30631EDFE2270043C94B /* LaunchScreen.storyboard */,
 				D21F30661EDFE2270043C94B /* Info.plist */,
@@ -79,6 +150,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D21F306C1EDFEAEA0043C94B /* LLImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				D21F307D1EDFFE870043C94B /* LLImagePicker.bundle */,
+				D21F306D1EDFEAEA0043C94B /* Libraies */,
+				D21F307F1EDFFF570043C94B /* LLImagePicker.h */,
+				D21F30801EDFFFCF0043C94B /* LLImagePickerConst.h */,
+				D21F308A1EE00BB90043C94B /* LLImagePickerView.h */,
+				D21F308B1EE00BB90043C94B /* LLImagePickerView.m */,
+				D21F30871EE009F80043C94B /* LLImagePickerCell.h */,
+				D21F30881EE009F80043C94B /* LLImagePickerCell.m */,
+				D21F30841EE003320043C94B /* LLImagePickerManager.h */,
+				D21F30851EE003320043C94B /* LLImagePickerManager.m */,
+				D21F30811EE002A80043C94B /* LLImagePickerModel.h */,
+				D21F30821EE002A80043C94B /* LLImagePickerModel.m */,
+			);
+			name = LLImagePicker;
+			path = ../LLImagePicker;
+			sourceTree = "<group>";
+		};
+		D21F306D1EDFEAEA0043C94B /* Libraies */ = {
+			isa = PBXGroup;
+			children = (
+				D21F306E1EDFECA00043C94B /* UIViewController+LLMediaExt.h */,
+				D21F306F1EDFECA00043C94B /* UIViewController+LLMediaExt.m */,
+				D21F30711EDFECED0043C94B /* NSString+LLMediaExt.h */,
+				D21F30721EDFECED0043C94B /* NSString+LLMediaExt.m */,
+				D21F30741EDFED950043C94B /* UIView+LLMediaExt.h */,
+				D21F30751EDFED950043C94B /* UIView+LLMediaExt.m */,
+				D21F30771EDFEDE50043C94B /* UIImageView+LLMediaExt.h */,
+				D21F30781EDFEDE50043C94B /* UIImageView+LLMediaExt.m */,
+				D21F307A1EDFFCAE0043C94B /* UIImage+LLGif.h */,
+				D21F307B1EDFFCAE0043C94B /* UIImage+LLGif.m */,
+			);
+			path = Libraies;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D21F30691EDFE2270043C94B /* Build configuration list for PBXNativeTarget "LLImagePickerDemo" */;
 			buildPhases = (
+				D10766EF0CD8EA54DFA4E593 /* [CP] Check Pods Manifest.lock */,
 				D21F304E1EDFE2270043C94B /* Sources */,
 				D21F304F1EDFE2270043C94B /* Frameworks */,
 				D21F30501EDFE2270043C94B /* Resources */,
+				C007750B68129DD9BFE08FB1 /* [CP] Embed Pods Frameworks */,
+				FE10B9CD980F607D209395A3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D21F30651EDFE2270043C94B /* LaunchScreen.storyboard in Resources */,
+				D21F307E1EDFFE870043C94B /* LLImagePicker.bundle in Resources */,
 				D21F30621EDFE2270043C94B /* Assets.xcassets in Resources */,
 				D21F30601EDFE2270043C94B /* Main.storyboard in Resources */,
 			);
@@ -145,14 +257,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C007750B68129DD9BFE08FB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LLImagePickerDemo/Pods-LLImagePickerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D10766EF0CD8EA54DFA4E593 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FE10B9CD980F607D209395A3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LLImagePickerDemo/Pods-LLImagePickerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D21F304E1EDFE2270043C94B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D21F305D1EDFE2270043C94B /* ViewController.m in Sources */,
+				D21F30891EE009F80043C94B /* LLImagePickerCell.m in Sources */,
+				D21F308F1EE02C520043C94B /* AddLLImagePickerVC.m in Sources */,
+				D21F30921EE02F6E0043C94B /* DisplayLLImagePickerVC.m in Sources */,
+				D21F30701EDFECA00043C94B /* UIViewController+LLMediaExt.m in Sources */,
+				D21F30731EDFECED0043C94B /* NSString+LLMediaExt.m in Sources */,
+				D21F30791EDFEDE50043C94B /* UIImageView+LLMediaExt.m in Sources */,
+				D21F307C1EDFFCAE0043C94B /* UIImage+LLGif.m in Sources */,
+				D21F30831EE002A80043C94B /* LLImagePickerModel.m in Sources */,
 				D21F305A1EDFE2270043C94B /* AppDelegate.m in Sources */,
+				D21F30861EE003320043C94B /* LLImagePickerManager.m in Sources */,
 				D21F30571EDFE2270043C94B /* main.m in Sources */,
+				D21F308C1EE00BB90043C94B /* LLImagePickerView.m in Sources */,
+				D21F30761EDFED950043C94B /* UIView+LLMediaExt.m in Sources */,
+				D21F309F1EE1002D0043C94B /* EditLLImagePickerVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +442,7 @@
 		};
 		D21F306A1EDFE2270043C94B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61389281DE6C303292F13E0E /* Pods-LLImagePickerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LLImagePickerDemo/Info.plist;
@@ -281,6 +454,7 @@
 		};
 		D21F306B1EDFE2270043C94B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FB393344354E24C39FE7764 /* Pods-LLImagePickerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LLImagePickerDemo/Info.plist;
@@ -309,6 +483,7 @@
 				D21F306B1EDFE2270043C94B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

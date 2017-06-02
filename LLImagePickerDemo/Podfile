@@ -1,0 +1,13 @@
+ platform :ios, '8.0'
+ use_frameworks!
+
+target 'LLImagePickerDemo' do
+
+pod 'TZImagePickerController'
+
+pod 'MWPhotoBrowser'
+
+pod 'ACAlertController'
+
+
+end
