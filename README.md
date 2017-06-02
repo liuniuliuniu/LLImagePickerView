@@ -140,6 +140,7 @@ pickerV.allowMultipleSelection = NO;
 ## <a id="hope"></a>Hope
 * 代码使用过程中，发现任何问题，可以随时issue
 * 如果有更多建议或者想法也可以直接联系我 QQ:416997919
+* 本人简书地址  也可随时在简书留言[LLPhotoBrowser](http://www.jianshu.com/p/54ef9f9f17e9)
 * 觉得框架对你有一点点帮助的，就请支持下，点个赞。
 
 ## Licenses
