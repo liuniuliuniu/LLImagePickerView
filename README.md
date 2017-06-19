@@ -1,7 +1,7 @@
 # LLImagePicker
 完整的媒体库选择和展示的框架。包括本地图片、视频选取，拍摄、录像等，并得到对应的用于上传的数据类型，媒体文件上传从此简单上手。
 
-![LLImagePickerGif.gif](https://github.com/liuniuliuniu/LLImagePicker/blob/master/LLAnim.gif)
+![LLImagePickerGif.gif](https://github.com/liuniuliuniu/LLImagePicker/blob/master/LLImagePickerDemo.gif)
 
 ## 导航
 * [基本要求](#Requirements)
