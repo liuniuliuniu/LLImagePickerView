@@ -72,6 +72,7 @@
     _allowMultipleSelection = YES;
     _maxImageSelected = 9;
     _backgroundColor = [UIColor whiteColor];
+    _isAddPresentVC = NO;
     rootVC = [self getCurrentVC];
     [self configureCollectionView];
 }
@@ -173,6 +174,7 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     LLImagePickerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([LLImagePickerCell class]) forIndexPath:indexPath];
     
     if (indexPath.row == _mediaArray.count) {
@@ -351,7 +353,8 @@
     if (!_allowMultipleSelection) {
         imagePickController.selectedAssets = _selectedImageAssets;
     }
-    [rootVC presentViewController:imagePickController animated:YES completion:nil];
+    
+    [ (_isAddPresentVC ? [self getTopController] : rootVC) presentViewController:imagePickController animated:YES completion:nil];
 }
 
 /** 相机 */
@@ -364,7 +367,9 @@
         //设置拍照后的图片可被编辑
         picker.allowsEditing = YES;
         picker.sourceType = sourceType;
-        [rootVC presentViewController:picker animated:YES completion:nil];
+        
+    [ (_isAddPresentVC ? [self getTopController] : rootVC) presentViewController:picker animated:YES completion:nil];
+
     }else{
         [UIAlertController showAlertWithTitle:@"该设备不支持拍照" message:nil actionTitles:@[@"确定"] cancelTitle:nil style:UIAlertControllerStyleAlert completion:nil];
     }
@@ -384,7 +389,8 @@
     } else {
         [UIAlertController showAlertWithTitle:@"当前设备不支持录像" message:nil actionTitles:@[@"确定"] cancelTitle:nil style:UIAlertControllerStyleAlert completion:nil];
     }
-    [rootVC presentViewController:picker animated:YES completion:nil];
+    
+    [ (_isAddPresentVC ? [self getTopController] : rootVC) presentViewController:picker animated:YES completion:nil];
     
 }
 
@@ -397,7 +403,8 @@
     picker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:picker.sourceType];
     picker.allowsEditing = YES;
     UIViewController *vc = [[UIApplication sharedApplication] keyWindow].rootViewController;
-    [vc presentViewController:picker animated:YES completion:nil];
+    
+    [ (_isAddPresentVC ? [self getTopController] : vc) presentViewController:picker animated:YES completion:nil];
 }
 
 
@@ -580,6 +587,17 @@
         result = window.rootViewController;
     
     return result;
+}
+
+- (UIViewController *)getTopController{
+    
+    UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    
+    while (topController.presentedViewController) {
+        topController = topController.presentedViewController;
+    }
+    
+    return topController;
 }
 
 

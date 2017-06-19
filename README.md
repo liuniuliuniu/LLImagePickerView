@@ -10,6 +10,7 @@
 * [如何添加](#add)
 * [使用详情](#detail)
 * [属性自定义](#custom)
+* [V1.1更新](#V1.1Update)
 * [Hope](#hope)
 
 
@@ -81,7 +82,7 @@ self.tableView.tableHeaderView = pickerV;
 * `type`
 >需要展示的媒体的资源类型：如仅显示图片等，默认是 LLImageTypePhotoAndCamera
 ```
-e.g. 点击加号按钮，自定义所想要的媒体资源选项
+点击加号按钮，自定义所想要的媒体资源选项
 pickerV.type = LLImageTypePhoto
 ```
 
@@ -91,28 +92,28 @@ pickerV.type = LLImageTypePhoto
 包括网络图片和gif图片
 
 ```
-e.g. 在预览或者之前已经有图片的情况下，需要传入进行预先展示
+在预览或者之前已经有图片的情况下，需要传入进行预先展示
 pickerV.preShowMedias = @[@"4",@"1",@"http://s1.dwstatic.com/group1/M00/AA/B8/b9a8f39ed9c8609354a07cc38452aef9.gif"];
 ```
 
 * `maxImageSelected`
 >最大图片、视频选择个数，包括 `preShowMedias`的数量. default is 9
 ```
-e.g. 自定义从本地相册中所选取的最大数量
+自定义从本地相册中所选取的最大数量
 pickerV.maxImageSelected = 5;
 ```
 
 * `showDelete`
 >是否显示删除按钮. Defaults is YES
 ```
-e.g. 一般在预览情况下设置为 NO
+一般在预览情况下设置为 NO
 pickerV.showDelete = NO;
 ```
 
 * `showAddButton`
 >是否需要显示添加按钮. Defaults is YES 
 ```
-e.g. 一般在预览情况下设置为 NO
+一般在预览情况下设置为 NO
 pickerV.showAddButton = NO;
 ```
 
@@ -120,7 +121,7 @@ pickerV.showAddButton = NO;
 >是否允许 在选择图片的同时可以选择视频文件. default is NO
 >选择的本地视频只是简单加载显示，当需要立刻播放选择的本地视频时，会有一个转码加载的过程，请等待（注意）
 ```
-e.g. 如果希望在选择图片的时候，出现视频资源，那么可以设置为 YES
+如果希望在选择图片的时候，出现视频资源，那么可以设置为 YES
 pickerV.allowPickingVideo = NO;
 ```
 
@@ -128,12 +129,23 @@ pickerV.allowPickingVideo = NO;
 >是否允许 同个图片或视频进行多次选择. default is YES
 如果设置为 NO，那么在已经选择了一张以上图片之后，就不能同时选择视频了（注意）
 ```
-e.g.  如果不希望已经选择的图片或视频，再次被选择，那么可以设置为 NO
+如果不希望已经选择的图片或视频，再次被选择，那么可以设置为 NO
 pickerV.allowMultipleSelection = NO;
 ```
 
 * `backgroundColor`
 >底部collectionView的背景颜色，有特殊颜色要求的可以单独去设置
+
+
+## <a id="V1.1Update"></a>V1.1更新
+
+* `isAddPresentVC`
+
+>是否 添加在 present 出来的控制器  default is NO
+
+```
+pickerV.isAddPresentVC = YES;
+```
 
 ------
 

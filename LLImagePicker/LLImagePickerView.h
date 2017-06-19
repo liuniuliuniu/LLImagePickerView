@@ -58,7 +58,10 @@ typedef void(^LLSelecttImageBackBlock)(NSArray<LLImagePickerModel *> *list);
  * 是否允许 同个图片或视频进行多次选择. default is YES
  */
 @property (nonatomic, assign) BOOL allowMultipleSelection;
-
+/**
+ * 是否 添加在 present 出来的控制器 默认是 NO
+ */
+@property (nonatomic, assign) BOOL isAddPresentVC;
 /**
  * 底部collectionView的 backgroundColor
  */
@@ -80,6 +83,7 @@ typedef void(^LLSelecttImageBackBlock)(NSArray<LLImagePickerModel *> *list);
  * 视图一开始默认高度
  */
 + (CGFloat)defaultViewHeight;
+
 
 /**
  * 刷新
