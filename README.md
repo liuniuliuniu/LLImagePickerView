@@ -139,13 +139,7 @@ pickerV.allowMultipleSelection = NO;
 
 ## <a id="V1.1Update"></a>V1.1更新
 
-* `isAddPresentVC`
-
->是否 添加在 present 出来的控制器  default is NO
-
-```
-pickerV.isAddPresentVC = YES;
-```
+> 修复了将LLImagePicker 添加到Present出来的控制器的时候出现的一些bug
 
 ------
 

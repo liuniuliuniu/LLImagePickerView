@@ -72,8 +72,7 @@
     _allowMultipleSelection = YES;
     _maxImageSelected = 9;
     _backgroundColor = [UIColor whiteColor];
-    _isAddPresentVC = NO;
-    rootVC = [self getCurrentVC];
+    rootVC = [self getTopController];
     [self configureCollectionView];
 }
 
@@ -354,7 +353,7 @@
         imagePickController.selectedAssets = _selectedImageAssets;
     }
     
-    [ (_isAddPresentVC ? [self getTopController] : rootVC) presentViewController:imagePickController animated:YES completion:nil];
+    [rootVC presentViewController:imagePickController animated:YES completion:nil];
 }
 
 /** 相机 */
@@ -368,7 +367,7 @@
         picker.allowsEditing = YES;
         picker.sourceType = sourceType;
         
-    [ (_isAddPresentVC ? [self getTopController] : rootVC) presentViewController:picker animated:YES completion:nil];
+     [rootVC presentViewController:picker animated:YES completion:nil];
 
     }else{
         [UIAlertController showAlertWithTitle:@"该设备不支持拍照" message:nil actionTitles:@[@"确定"] cancelTitle:nil style:UIAlertControllerStyleAlert completion:nil];
@@ -390,7 +389,7 @@
         [UIAlertController showAlertWithTitle:@"当前设备不支持录像" message:nil actionTitles:@[@"确定"] cancelTitle:nil style:UIAlertControllerStyleAlert completion:nil];
     }
     
-    [ (_isAddPresentVC ? [self getTopController] : rootVC) presentViewController:picker animated:YES completion:nil];
+     [rootVC presentViewController:picker animated:YES completion:nil];
     
 }
 
@@ -402,9 +401,8 @@
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     picker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:picker.sourceType];
     picker.allowsEditing = YES;
-    UIViewController *vc = [[UIApplication sharedApplication] keyWindow].rootViewController;
     
-    [ (_isAddPresentVC ? [self getTopController] : vc) presentViewController:picker animated:YES completion:nil];
+    [rootVC presentViewController:picker animated:YES completion:nil];
 }
 
 
@@ -560,34 +558,6 @@
 }
 
 #pragma mark - private
-
-- (UIViewController *)getCurrentVC
-{
-    UIViewController *result = nil;
-    
-    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
-    if (window.windowLevel != UIWindowLevelNormal)
-    {
-        NSArray *windows = [[UIApplication sharedApplication] windows];
-        for(UIWindow * tmpWin in windows)
-        {
-            if (tmpWin.windowLevel == UIWindowLevelNormal)
-            {
-                window = tmpWin;
-                break;
-            }
-        }
-    }    
-    UIView *frontView = [[window subviews] objectAtIndex:0];
-    id nextResponder = [frontView nextResponder];
-    
-    if ([nextResponder isKindOfClass:[UIViewController class]])
-        result = nextResponder;
-    else
-        result = window.rootViewController;
-    
-    return result;
-}
 
 - (UIViewController *)getTopController{
     

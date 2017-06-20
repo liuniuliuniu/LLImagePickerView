@@ -9,7 +9,6 @@
 #import "PresentViewController.h"
 #import "LLImagePicker.h"
 
-
 @interface PresentViewController ()
 
 @end
@@ -24,9 +23,7 @@
     CGFloat height = [LLImagePickerView defaultViewHeight];
     LLImagePickerView *pickerV = [[LLImagePickerView alloc]initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, height)];
     pickerV.type = LLImageTypePhoto;
-    pickerV.allowMultipleSelection = YES;
-    //  设置属性是否添加在 present 出来的控制器
-    pickerV.isAddPresentVC = YES;
+    pickerV.allowMultipleSelection = YES;        
     [self.view addSubview:pickerV];
     [pickerV observeSelectedMediaArray:^(NSArray<LLImagePickerModel *> *list) {
         NSLog(@"%@",list);

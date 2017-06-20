@@ -23,7 +23,7 @@
     LLImagePickerView *pickerV = [[LLImagePickerView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, height)];
     pickerV.showDelete = NO;
     pickerV.showAddButton = NO;
-    pickerV.preShowMedias = @[@"1",@"2",@"3",@"4"];
+    pickerV.preShowMedias = @[@"1",@"2",@"3",@"4"];    
     self.tableView.tableHeaderView = pickerV;
 }
 
