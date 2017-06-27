@@ -35,6 +35,9 @@
 
 ### <a id="add"></a>如何添加
 
+* 不支持cocopod<因为这个LLImagePicker名字已经被占用了   宝宝也很无奈呀>
+
+
 * 手动添加
 - 把`LLImagePicker`文件拉到项目中
 - 添加头文件`#import "LLImagePicker.h"`

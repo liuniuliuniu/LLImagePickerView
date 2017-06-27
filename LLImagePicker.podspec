@@ -22,8 +22,9 @@ Pod::Spec.new do |s|
 
   s.source_files  = "LLImagePicker", "LLImagePicker/**/*.{h,m}"
   s.requires_arc = true
-  s.dependency "TZImagePickerController", "MWPhotoBrowser", "ACAlertController", "SDWebImage"
-
-
+  s.dependency "TZImagePickerController"
+  s.dependency "MWPhotoBrowser", '~> 2.1.2'
+  s.dependency "ACAlertController"
+  s.dependency "SDWebImage"
 
 end

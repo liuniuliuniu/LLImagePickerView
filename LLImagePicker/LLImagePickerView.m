@@ -102,7 +102,6 @@
         [self layoutCollection];
     }
 }
-
 - (void)setPreShowMedias:(NSArray *)preShowMedias {
     _preShowMedias = preShowMedias;
     
@@ -181,7 +180,6 @@
         cell.videoImageView.hidden = YES;
         cell.deleteButton.hidden = YES;
     }else{
-        
         LLImagePickerModel *model = [[LLImagePickerModel alloc]init];
         model = _mediaArray[indexPath.row];
         if (!model.isVideo && model.imageUrlString) {
@@ -189,7 +187,6 @@
         }else {
             cell.icon.image = model.image;
         }
-        cell.icon.image = model.image;
         cell.videoImageView.hidden = !model.isVideo;
         cell.deleteButton.hidden = !_showDelete;
         [cell setLLClickDeleteButton:^{
@@ -207,6 +204,8 @@
                     [_selectedVideoModels removeObject:model];
                 }
             }
+            
+            
             //总数据源中删除对应项
             [_mediaArray removeObjectAtIndex:indexPath.row];
             dispatch_async(dispatch_get_main_queue(), ^{
