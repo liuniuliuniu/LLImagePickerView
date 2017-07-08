@@ -31,7 +31,7 @@ typedef void(^LLSelecttImageBackBlock)(NSArray<LLImagePickerModel *> *list);
 @property (nonatomic,assign) LLImageType type;
 /**
  * 预先展示的媒体数组。如果一开始有需要显示媒体资源，可以先传入进行显示，没有的话可以不赋值。
- * 传入的如果是图片类型，则可以是：UIImage，NSString，至于其他的都可以传入 ACMediaModel类型
+ * 传入的如果是图片类型，则可以是：UIImage，NSString，至于其他的都可以传入 LLImagePickerModel类型
  * 当前只支持图片和视频
  */
 @property(nonatomic, strong)NSArray *preShowMedias;

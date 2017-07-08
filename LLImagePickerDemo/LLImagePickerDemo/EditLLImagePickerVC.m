@@ -35,7 +35,7 @@
     // png jpg gif 
     pickerV.preShowMedias = @[@"4",@"1",@"http://s1.dwstatic.com/group1/M00/AA/B8/b9a8f39ed9c8609354a07cc38452aef9.gif"];
     pickerV.allowMultipleSelection = NO;
-    pickerV.allowPickingVideo = YES;    
+    pickerV.allowPickingVideo = YES;
     self.pickerV = pickerV;
     // 动态变换高度
     [pickerV observeViewHeight:^(CGFloat height) {
@@ -47,7 +47,7 @@
     [pickerV observeSelectedMediaArray:^(NSArray<LLImagePickerModel *> *list) {
         for (LLImagePickerModel *model in list) {
             // 在这里取到模型的数据
-            NSLog(@"%@",model.imageUrlString);
+            NSLog(@"%@",model);
         }
     }];
     [headerV addSubview:pickerV];

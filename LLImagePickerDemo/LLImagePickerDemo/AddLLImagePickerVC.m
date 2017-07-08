@@ -22,7 +22,9 @@
     CGFloat height = [LLImagePickerView defaultViewHeight];
     LLImagePickerView *pickerV = [[LLImagePickerView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, height)];
     pickerV.type = LLImageTypePhoto;
-    pickerV.allowMultipleSelection = YES;    
+    pickerV.maxImageSelected = 5;
+    pickerV.allowMultipleSelection = NO;
+    pickerV.allowPickingVideo = YES;
     self.tableView.tableHeaderView = pickerV;    
     [pickerV observeSelectedMediaArray:^(NSArray<LLImagePickerModel *> *list) {
         NSLog(@"%@",list);

@@ -19,6 +19,8 @@
 /** 视频标志 */
 @property (nonatomic, strong) UIImageView *videoImageView;
 
-@property (nonatomic, copy) void(^LLClickDeleteButton)();
+@property(nonatomic, strong)NSIndexPath *cellIndexPath;
+
+@property (nonatomic, copy) void(^LLClickDeleteButton)(NSIndexPath *cellIndexPath);
 
 @end

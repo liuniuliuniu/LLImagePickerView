@@ -130,7 +130,7 @@
         [temp addObject:model];
     }
     if (temp.count > 0) {
-        _mediaArray = temp;
+        [_mediaArray addObjectsFromArray:temp.copy];
         [self layoutCollection];
     }
 }
@@ -168,12 +168,13 @@
 
 #pragma mark -  Collection View DataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return _showAddButton ? _mediaArray.count + 1 : _mediaArray.count;
+    return _showAddButton ? ( _mediaArray.count == _maxImageSelected ? _mediaArray.count : _mediaArray.count + 1 ): _mediaArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     LLImagePickerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([LLImagePickerCell class]) forIndexPath:indexPath];
+    cell.cellIndexPath = indexPath;
     
     if (indexPath.row == _mediaArray.count) {
         cell.icon.image = [UIImage imageNamed:@"LLImagePicker.bundle/AddMedia"];
@@ -189,37 +190,39 @@
         }
         cell.videoImageView.hidden = !model.isVideo;
         cell.deleteButton.hidden = !_showDelete;
-        [cell setLLClickDeleteButton:^{
-            LLImagePickerModel *model = _mediaArray[indexPath.row];
+        
+        cell.LLClickDeleteButton = ^(NSIndexPath *cellIndexPath) {
+            
+            LLImagePickerModel *model = _mediaArray[cellIndexPath.row];
+            
             if (!_allowMultipleSelection) {
-                if ([_selectedImageModels containsObject:model]) {
-                    for (NSInteger idx =0; idx < _selectedImageModels.count; idx++) {
-                        if (_selectedImageModels[idx] == model) {
+                
+                    for (NSInteger idx = 0; idx < _selectedImageModels.count; idx++) {
+                        
+                        if ([((LLImagePickerModel *)_selectedImageModels[idx]) isEqual:model ]) {
                             [_selectedImageAssets removeObjectAtIndex:idx];
                             [_selectedImageModels removeObject:model];
                             break;
                         }
                     }
-                }else if ([_selectedVideoModels containsObject:model]) {
-                    [_selectedVideoModels removeObject:model];
+                
+                for (NSInteger idx = 0; idx < _selectedVideoModels.count; idx++) {
+                    
+                    if ([((LLImagePickerModel *)_selectedVideoModels[idx]) isEqual:model]) {
+                        [_selectedVideoModels removeObject:model];
+                    }
                 }
             }
-            
-            
-            //总数据源中删除对应项
-            [_mediaArray removeObjectAtIndex:indexPath.row];
+            [_mediaArray removeObjectAtIndex:cellIndexPath.row];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self layoutCollection];
             });
-            
-        }];
-    
+        };
     }
     return cell;
 }
 
 #pragma mark - collection view delegate
-
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == _mediaArray.count && _mediaArray.count >= _maxImageSelected) {
         [UIAlertController showAlertWithTitle:[NSString stringWithFormat:@"最多只能选择%ld张",(long)_maxImageSelected] message:nil actionTitles:@[@"确定"] cancelTitle:nil style:UIAlertControllerStyleAlert completion:nil];
@@ -320,7 +323,7 @@
 ///重新布局collectionview
 - (void)layoutCollection {
     
-    NSInteger allImageCount = _showAddButton ? _mediaArray.count + 1 : _mediaArray.count;
+    NSInteger allImageCount = _showAddButton ?(_mediaArray.count == _maxImageSelected ? _mediaArray.count : _mediaArray.count + 1 ): _mediaArray.count;
     NSInteger maxRow = (allImageCount - 1) / 4 + 1;
     _collectionView.height = allImageCount == 0 ? 0 : maxRow * LLPicker_ScreenWidth/4;
     self.height = _collectionView.height;
@@ -428,7 +431,6 @@
             model.name = name;
             model.uploadType = pathData;
             model.image = photos[index];
-            
             //区分gif
             if ([NSString isGifWithImageData:pathData]) {
                 model.image = [UIImage ll_setGifWithData:pathData];
@@ -437,13 +439,15 @@
             if (!_allowMultipleSelection) {
                 //用数组是否包含来判断是不成功的。。。
                 for (LLImagePickerModel *md in _selectedImageModels) {
-                    if ([md.name isEqualToString:model.name]) {
+                    // 新方法
+                    if ([md isEqual:model] ) {
                         [temp addObject:md];
                         [temp2 addObject:model];
                         break;
                     }
                 }
             }
+            
             [models addObject:model];
             
             if (index == assets.count - 1) {
@@ -484,7 +488,8 @@
             if (!_allowMultipleSelection) {
                 //用数组是否包含来判断是不成功的。。。
                 for (LLImagePickerModel *tmp in _selectedVideoModels) {
-                    if ([tmp.name isEqualToString:model.name]) {
+                    // 新的写法
+                    if ([tmp isEqual:model]) {
                         return ;
                     }
                 }

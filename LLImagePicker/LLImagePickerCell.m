@@ -44,7 +44,8 @@
     _videoImageView.frame = CGRectMake(self.bounds.size.width/4, self.bounds.size.width/4, self.bounds.size.width/2, self.bounds.size.width/2);
 }
 - (void)clickDeleteButton {
-    !_LLClickDeleteButton ?  : _LLClickDeleteButton();
+//    !_LLClickDeleteButton ?  : _LLClickDeleteButton();
+    !_LLClickDeleteButton ?  : _LLClickDeleteButton(self.cellIndexPath);
 }
 
 @end
