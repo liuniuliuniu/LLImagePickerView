@@ -10,7 +10,6 @@
 * [如何添加](#add)
 * [使用详情](#detail)
 * [属性自定义](#custom)
-* [V1.1更新](#V1.1Update)
 * [Hope](#hope)
 
 
@@ -35,12 +34,17 @@
 
 ### <a id="add"></a>如何添加
 
-* 不支持cocopod<因为这个LLImagePicker名字已经被占用了   宝宝也很无奈呀>
+* 支持cocoapod
+
+  ```
+  pod 'LLImagePickerView.h'
+  ```
 
 
 * 手动添加
-- 把`LLImagePicker`文件拉到项目中
-- 添加头文件`#import "LLImagePicker.h"`
+ - 把`LLImagePickerView`文件拉到项目中
+ - 添加头文件`#import "LLImagePickerView.h"`
+ - 还要添加一些依赖库
 
 ### <a id="detail"></a>使用详情（具体看 `LLImagePickerDemo` 示例）
 *demo目录分析*
@@ -60,7 +64,7 @@ pickerV.type = LLImageTypePhoto;
 // 是否允许 同个图片或视频进行多次选择
 pickerV.allowMultipleSelection = YES;
 
-//视情况看是否需要改变高度，目前单独使用且作为tableview的header，并不用监控并改变高度
+//视情况看是否需要改变高度，目前单独使用且作为tableview的header，实时监控高度的变化
 [pickerV observeViewHeight:^(CGFloat height) {
 
 }];
@@ -140,9 +144,6 @@ pickerV.allowMultipleSelection = NO;
 >底部collectionView的背景颜色，有特殊颜色要求的可以单独去设置
 
 
-## <a id="V1.1Update"></a>V1.1更新
-
-> 修复了将LLImagePicker 添加到Present出来的控制器的时候出现的一些bug
 
 ------
 
@@ -150,6 +151,7 @@ pickerV.allowMultipleSelection = NO;
 * 代码使用过程中，发现任何问题，可以随时issue
 * 如果有更多建议或者想法也可以直接联系我 QQ:416997919
 * 本人简书地址  也可随时在简书留言[LLPhotoBrowser](http://www.jianshu.com/p/54ef9f9f17e9)
+* 期间感谢有几位朋友提出宝贵的意见让此框架更加完善 感谢
 * 觉得框架对你有一点点帮助的，就请支持下，点个赞。
 
 ## Licenses
