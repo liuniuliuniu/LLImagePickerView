@@ -7,7 +7,7 @@
 //
 
 #import "PresentViewController.h"
-#import "LLImagePicker.h"
+#import "LLImagePickerView.h"
 
 @interface PresentViewController ()
 

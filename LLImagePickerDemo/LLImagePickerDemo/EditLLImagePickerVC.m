@@ -7,7 +7,7 @@
 //
 
 #import "EditLLImagePickerVC.h"
-#import "LLImagePicker.h"
+#import "LLImagePickerView.h"
 
 @interface EditLLImagePickerVC ()
 
