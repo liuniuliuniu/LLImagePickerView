@@ -17,8 +17,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "8.0"
 
-  s.source_files  = "LLImagePickerView", "LLImagePickerView/**/*.{h,m}"
-
+  s.source_files  = "LLImagePickerView/**/*.{h,m}"
+  s.resources = 'LLImagePickerView/*.{bundle}'
   s.requires_arc = true
 
   s.dependency "TZImagePickerController"
