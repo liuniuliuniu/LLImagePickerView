@@ -37,8 +37,11 @@
 * 支持cocoapod
 
   ```
-  pod 'LLImagePickerView.h'
+  pod 'LLImagePickerView'
+
   ```
+>有人反馈搜不到   可能是cocoapod版本低的问题  
+>执行代码 `pod setup` 升级一下cocoapod
 
 
 * 手动添加
