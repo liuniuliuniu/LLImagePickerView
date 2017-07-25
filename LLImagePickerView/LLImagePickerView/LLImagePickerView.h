@@ -86,6 +86,13 @@ typedef void(^LLSelecttImageBackBlock)(NSArray<LLImagePickerModel *> *list);
  * 刷新
  */
 - (void)reload;
-
+/**
+*   打开摄像头
+*/
+- (void)openCamera;
+/**
+*   打开相册
+*/
+- (void)openAlbum;
 
 @end
