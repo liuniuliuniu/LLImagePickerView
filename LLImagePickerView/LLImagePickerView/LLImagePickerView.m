@@ -177,7 +177,7 @@
     cell.cellIndexPath = indexPath;
     
     if (indexPath.row == _mediaArray.count) {
-        cell.icon.image = [UIImage imageNamed:@"LLImagePicker.bundle/AddMedia"];
+        cell.icon.image = [UIImage imageNamed:@"LLImagePicker.bundle/AddMedia" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil];
         cell.videoImageView.hidden = YES;
         cell.deleteButton.hidden = YES;
     }else{
