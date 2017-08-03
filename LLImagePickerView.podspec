@@ -3,9 +3,9 @@ Pod::Spec.new do |s|
 
   s.name         = "LLImagePickerView"
 
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
 
-  s.summary      = "LLImagePickerView is a MediaFrameword"
+  s.summary      = "LLImagePickerView is a MediaFramework"
 
   s.homepage     = "https://github.com/liuniuliuniu/LLImagePickerView"
 
@@ -23,9 +23,8 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.dependency "TZImagePickerController"
+  s.dependency "TZImagePickerController" , '~> 1.7.9'
   s.dependency "MWPhotoBrowser", '~> 2.1.2'
-  s.dependency "ACAlertController"
-  s.dependency "SDWebImage"
+  s.dependency "ACAlertController", '~> 1.0.0'  
 
 end

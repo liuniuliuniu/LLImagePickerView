@@ -3,11 +3,11 @@
 
 target 'LLImagePickerDemo' do
 
-pod 'TZImagePickerController'
+pod 'TZImagePickerController' , '~> 1.7.9'
 
-pod 'MWPhotoBrowser'
+pod 'MWPhotoBrowser' , '~> 2.1.2'
 
-pod 'ACAlertController'
+pod 'ACAlertController' , '~> 1.0.0'
 
 
 end
