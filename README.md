@@ -10,6 +10,7 @@
 * [如何添加](#add)
 * [使用详情](#detail)
 * [属性自定义](#custom)
+* [Version](#version)
 * [Hope](#hope)
 
 
@@ -146,6 +147,11 @@ pickerV.allowMultipleSelection = NO;
 * `backgroundColor`
 >底部collectionView的背景颜色，有特殊颜色要求的可以单独去设置
 
+
+### <a id="Version"></a>Version
+
+* 0.0.1 支持cocoapod 并且修复了present控制器的bug,以及图片错乱的问题
+* 0.0.2 支持cocoapod 指定依赖库版本 修复部分加载图片Bundle的问题
 
 
 ------
