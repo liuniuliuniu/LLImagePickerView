@@ -160,9 +160,9 @@ pickerV.allowMultipleSelection = NO;
 
 
 ### <a id="Version"></a>Version
-
+* 0.0.3 修复嵌套多层控制器时 pop 出现的bug 
+* 0.0.2 指定依赖库版本 修复部分加载图片Bundle的问题
 * 0.0.1 支持cocoapod 并且修复了present控制器的bug,以及图片错乱的问题
-* 0.0.2 支持cocoapod 指定依赖库版本 修复部分加载图片Bundle的问题
 
 ------
 
