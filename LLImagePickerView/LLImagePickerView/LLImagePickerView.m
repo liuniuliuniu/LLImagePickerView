@@ -39,9 +39,7 @@
 
 @end
 
-@implementation LLImagePickerView{
-    UIViewController *rootVC;
-}
+@implementation LLImagePickerView
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
@@ -72,7 +70,6 @@
     _allowMultipleSelection = YES;
     _maxImageSelected = 9;
     _backgroundColor = [UIColor whiteColor];
-    rootVC = [self getTopController];
     [self configureCollectionView];
 }
 
@@ -355,7 +352,7 @@
         imagePickController.selectedAssets = _selectedImageAssets;
     }
     
-    [rootVC presentViewController:imagePickController animated:YES completion:nil];
+    [[self viewController] presentViewController:imagePickController animated:YES completion:nil];
 }
 
 /** 相机 */
@@ -369,7 +366,7 @@
         picker.allowsEditing = YES;
         picker.sourceType = sourceType;
         
-     [rootVC presentViewController:picker animated:YES completion:nil];
+     [[self viewController] presentViewController:picker animated:YES completion:nil];
 
     }else{
         [UIAlertController showAlertWithTitle:@"该设备不支持拍照" message:nil actionTitles:@[@"确定"] cancelTitle:nil style:UIAlertControllerStyleAlert completion:nil];
@@ -391,7 +388,7 @@
         [UIAlertController showAlertWithTitle:@"当前设备不支持录像" message:nil actionTitles:@[@"确定"] cancelTitle:nil style:UIAlertControllerStyleAlert completion:nil];
     }
     
-     [rootVC presentViewController:picker animated:YES completion:nil];
+     [[self viewController] presentViewController:picker animated:YES completion:nil];
     
 }
 
@@ -404,7 +401,7 @@
     picker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:picker.sourceType];
     picker.allowsEditing = YES;
     
-    [rootVC presentViewController:picker animated:YES completion:nil];
+    [[self viewController] presentViewController:picker animated:YES completion:nil];
 }
 
 
@@ -561,18 +558,6 @@
     }
 }
 
-#pragma mark - private
-
-- (UIViewController *)getTopController{
-    
-    UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
-    
-    while (topController.presentedViewController) {
-        topController = topController.presentedViewController;
-    }
-    
-    return topController;
-}
 
 
 @end

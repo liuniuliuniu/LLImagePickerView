@@ -119,7 +119,20 @@
             return (UIViewController *)nextResponder;
         }
     }
-    return nil;
+    return [self getTopController];
 }
+
+- (UIViewController *)getTopController{
+    
+    UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    
+    while (topController.presentedViewController) {
+        topController = topController.presentedViewController;
+    }
+    
+    return topController;
+}
+
+
 
 @end

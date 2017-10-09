@@ -1,15 +1,14 @@
 # LLImagePicker
-完整的媒体库选择和展示的框架。包括本地图片、视频选取，拍摄、录像等，并得到对应的用于上传的数据类型，媒体文件上传从此简单上手。
+
+集本地图片、视频选取与展示,拍摄 ,录像于一体的并时刻回调用于上传的数据类型的多媒体框架
 
 ![LLImagePickerGif.gif](https://github.com/liuniuliuniu/LLImagePicker/blob/master/LLImagePickerDemo.gif)
 
-## 导航
-* [基本要求](#Requirements)
-* [实现功能](#function)
-* [结构层次](#Architecture)
+## 目录
+* [功能实现](#function)
 * [如何添加](#add)
-* [使用详情](#detail)
-* [属性自定义](#custom)
+* [使用介绍](#detail)
+* [自定义操作](#custom)
 * [Version](#version)
 * [Hope](#hope)
 
@@ -18,12 +17,11 @@
 
 * iOS 8.0  or later
 
-* Xcode 7.0 or later
-
 * 用到github上第三方：[TZImagePickerController](https://github.com/banchichen/TZImagePickerController)和[MWPhotoBrowser](https://github.com/mwaterfall/MWPhotoBrowser)和 [ACAlertController](https://github.com/honeycao/ACAlertController)
 
 
-## <a id="function"></a>实现功能
+## <a id="function"></a>功能实现
+
 * 本地图片视频选择、拍照录制等一条龙轻松实现
 * 框架主体是一个view，已经实现高度配置，不用再去做任何处理
 * 框架主体形势支持：添加媒体、预览展示媒体、混合编辑（添加和预览展示一起实现）
@@ -31,9 +29,9 @@
 * 从本地相册选择图片用到了`TZImagePickerController`；查看图片视频用到了`MWPhotoBrowser`；底部弹出框用到`ACAlertController`替代系统弹框
 * 自定义媒体model，返回图片、视频上传数据类型，如：NSData或视频路径。不用为了得到上传的数据类型做任何处理了。
 
-## <a id="Architecture">结构层次
 
-### <a id="add"></a>如何添加
+
+## <a id="add"></a>如何添加
 
 * 支持cocoapod
 
@@ -50,16 +48,18 @@
  - 添加头文件`#import "LLImagePickerView.h"`
  - 还要添加一些依赖库
 
-### <a id="detail"></a>使用详情（具体看 `LLImagePickerDemo` 示例）
+### <a id="detail"></a>使用介绍（具体看 `LLImagePickerDemo` 示例）
 *demo目录分析*
 * `AddLLImagePickerVC`        添加媒体的演示
 * `DisplayLLImagePickerVC`    预览媒体的演示
 * `EditLLImagePickerVC`       添加和预览混合编排的演示
+* `PresentVC`                 添加在 present 出来的控制器上
+
+
 ```
-// 唯一获取初始化高度的方法
+// 获取初始化高度
 CGFloat height = [LLImagePickerView defaultViewHeight];
 
-// 初始化
 LLImagePickerView *pickerV = [[LLImagePickerView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, height)];
 
 // 需要展示的媒体的资源类型，当前是仅本地图库
@@ -81,26 +81,37 @@ NSLog(@"%@",model.imageUrlString);
 }
 }];
 
-// 添加到控件上
 self.tableView.tableHeaderView = pickerV;
 ```
 -------
 
-### <a id="custom"></a>属性自定义
-
->demo中有些属性可能没用上，不同属性的设置可以达成不同的效果
+### <a id="custom"></a>自定义操作
 
 * `type`
->需要展示的媒体的资源类型：如仅显示图片等，默认是 LLImageTypePhotoAndCamera
+>需要展示的媒体的资源类型，默认是 LLImageTypePhotoAndCamera
+>
+
 ```
+typedef enum : NSUInteger {
+    LLImageTypePhotoAndCamera,// 本地相机和图片
+    LLImageTypePhoto,// 本地图片
+    LLImageTypeCamera,// 相机拍摄
+    LLImageTypeVideoTape,// 录像
+    LLImageTypeVideo,// 视频
+    LLImageTypeAll,// 所有资源
+} LLImageType;
+
+
 点击加号按钮，自定义所想要的媒体资源选项
 pickerV.type = LLImageTypePhoto
 ```
+
 
 * `preShowMedias`
 >预先展示的媒体数组。如果一开始有需要显示媒体资源，可以先传入进行显示，没有的话可以不赋值。
 传入的如果是图片类型，则可以是：UIImage，NSString，至于其他的都可以传入 LLImagePickerModel类型
 包括网络图片和gif图片
+
 
 ```
 在预览或者之前已经有图片的情况下，需要传入进行预先展示
@@ -152,7 +163,6 @@ pickerV.allowMultipleSelection = NO;
 
 * 0.0.1 支持cocoapod 并且修复了present控制器的bug,以及图片错乱的问题
 * 0.0.2 支持cocoapod 指定依赖库版本 修复部分加载图片Bundle的问题
-
 
 ------
 
