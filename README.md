@@ -2,7 +2,7 @@
 
 集本地图片、视频选取,展示,拍摄,录像于一体的并时刻回调用于上传的数据类型的多媒体框架
 
-![LLImagePickerGif.gif](https://github.com/liuniuliuniu/LLImagePicker/blob/master/LLImagePickerDemo.gif)
+![LLImagePickerGif.gif](https://github.com/liuniuliuniu/LLImagePickerView/blob/master/LLImagePickerView.gif)
 
 ## 目录
 * [功能实现](#function)
