@@ -18,17 +18,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);    
-    CGFloat height = [LLImagePickerView defaultViewHeight];
-    LLImagePickerView *pickerV = [[LLImagePickerView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, height)];
-    pickerV.type = LLImageTypePhoto;
-    pickerV.maxImageSelected = 5;
-    pickerV.allowMultipleSelection = NO;
+    self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+    
+    LLImagePickerView *pickerV = [LLImagePickerView ImagePickerViewWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 0) CountOfRow:3];
+    pickerV.type = LLImageTypeAll;
+    pickerV.maxImageSelected = 8;
     pickerV.allowPickingVideo = YES;
-    self.tableView.tableHeaderView = pickerV;    
+    self.tableView.tableHeaderView = pickerV;
     [pickerV observeSelectedMediaArray:^(NSArray<LLImagePickerModel *> *list) {
         NSLog(@"%@",list);
-    }];    
+    }];
+            
+    
 }
 
 

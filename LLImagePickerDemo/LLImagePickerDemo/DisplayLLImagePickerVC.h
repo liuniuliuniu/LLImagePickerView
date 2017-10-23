@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DisplayLLImagePickerVC : UITableViewController
+@interface DisplayLLImagePickerVC : UIViewController
 
 @end

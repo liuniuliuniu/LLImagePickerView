@@ -1,5 +1,5 @@
 //
-//  UIViewController+LLMediaExt.h
+//  UIViewController+LLExtension.h
 //  LLImagePickerDemo
 //
 //  Created by liushaohua on 2017/6/1.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (LLMediaExt)
+@interface UIViewController (LLExtension)
 /**
  快速创建AlertController：包括Alert 和 ActionSheet
  

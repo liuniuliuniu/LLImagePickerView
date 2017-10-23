@@ -26,7 +26,7 @@ typedef void(^LLSelecttImageBackBlock)(NSArray<LLImagePickerModel *> *list);
 @interface LLImagePickerView : UIView
 
 /**
- * 需要展示的媒体的资源类型：如仅显示图片等，默认是 ACMediaTypePhotoAndCamera
+ * 需要展示的媒体的资源类型：如仅显示图片等，默认是 LLImageTypePhotoAndCamera
  */
 @property (nonatomic,assign) LLImageType type;
 /**
@@ -34,7 +34,7 @@ typedef void(^LLSelecttImageBackBlock)(NSArray<LLImagePickerModel *> *list);
  * 传入的如果是图片类型，则可以是：UIImage，NSString，至于其他的都可以传入 LLImagePickerModel类型
  * 当前只支持图片和视频
  */
-@property(nonatomic, strong)NSArray *preShowMedias;
+@property (nonatomic, strong) NSArray *preShowMedias;
 /**
  * 最大资源选择个数,（包括 preShowMedias 预先展示数据）. default is 9
  */
@@ -76,11 +76,15 @@ typedef void(^LLSelecttImageBackBlock)(NSArray<LLImagePickerModel *> *list);
  */
 - (void)observeSelectedMediaArray: (LLSelecttImageBackBlock)backBlock;
 
-/**
- * 视图一开始默认高度
- */
-+ (CGFloat)defaultViewHeight;
 
+/**
+ 唯一的初始化方法 CountOfRow:每行展示的数量
+
+ @param frame  Frame 
+ @param count countOfRow
+ @return instance
+ */
++ (instancetype)ImagePickerViewWithFrame:(CGRect)frame CountOfRow:(NSInteger)count;
 
 /**
  * 刷新

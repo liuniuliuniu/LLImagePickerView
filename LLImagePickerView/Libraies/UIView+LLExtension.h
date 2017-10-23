@@ -1,5 +1,5 @@
 //
-//  UIView+LLMediaExt.h
+//  UIView+LLExtension.h
 //  LLImagePickerDemo
 //
 //  Created by liushaohua on 2017/6/1.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (LLMediaExt)
+@interface UIView (LLExtension)
 
 @property (nonatomic, assign) CGFloat x;
 @property (nonatomic, assign) CGFloat y;

@@ -1,14 +1,14 @@
 //
-//  UIViewController+LLMediaExt.m
+//  UIViewController+LLExtension.h
 //  LLImagePickerDemo
 //
 //  Created by liushaohua on 2017/6/1.
 //  Copyright © 2017年 liushaohua. All rights reserved.
 //
 
-#import "UIViewController+LLMediaExt.h"
+#import "UIViewController+LLExtension.h"
 
-@implementation UIViewController (LLMediaExt)
+@implementation UIViewController (LLExtension)
 
 + (void)showAlertWithTitle: (NSString *)title message: (NSString *)message actionTitles: (NSArray<NSString *> *)actions cancelTitle: (NSString *)cancelTitle style: (UIAlertControllerStyle)style completion: (void(^)(NSInteger index))completion {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:style];

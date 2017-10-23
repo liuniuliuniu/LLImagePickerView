@@ -1,5 +1,5 @@
 //
-//  NSString+LLMediaExt.h
+//  NSString+LLExtension.h
 //  LLImagePickerDemo
 //
 //  Created by liushaohua on 2017/6/1.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (LLMediaExt)
+@interface NSString (LLExtension)
 
 /**
  判断该字符串是不是一个有效的URL

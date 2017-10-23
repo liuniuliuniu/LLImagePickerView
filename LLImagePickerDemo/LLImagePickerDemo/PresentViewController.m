@@ -19,16 +19,16 @@
     [super viewDidLoad];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
-        
-    CGFloat height = [LLImagePickerView defaultViewHeight];
-    LLImagePickerView *pickerV = [[LLImagePickerView alloc]initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, height)];
+    LLImagePickerView *pickerV = [LLImagePickerView ImagePickerViewWithFrame:CGRectMake(50, 150, [UIScreen mainScreen].bounds.size.width - 100, 0) CountOfRow:3];
     pickerV.type = LLImageTypePhoto;
-    pickerV.allowMultipleSelection = YES;        
+    pickerV.allowMultipleSelection = YES;
+    pickerV.showAddButton = YES;
+    pickerV.showDelete = YES;
+    
     [self.view addSubview:pickerV];
     [pickerV observeSelectedMediaArray:^(NSArray<LLImagePickerModel *> *list) {
         NSLog(@"%@",list);
-    }];
-    
+    }];    
 }
 
 - (IBAction)backAction:(id)sender {

@@ -1,14 +1,14 @@
 //
-//  NSString+LLMediaExt.m
+//  NSString+LLExtension.m
 //  LLImagePickerDemo
 //
 //  Created by liushaohua on 2017/6/1.
 //  Copyright © 2017年 liushaohua. All rights reserved.
 //
 
-#import "NSString+LLMediaExt.h"
+#import "NSString+LLExtension.h"
 
-@implementation NSString (LLMediaExt)
+@implementation NSString (LLExtension)
 
 - (BOOL)isValidUrl {
     NSString *regex =@"[a-zA-z]+://[^\\s]*";

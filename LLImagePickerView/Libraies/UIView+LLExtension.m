@@ -1,14 +1,14 @@
 //
-//  UIView+LLMediaExt.m
+//  UIView+LLExtension.m
 //  LLImagePickerDemo
 //
 //  Created by liushaohua on 2017/6/1.
 //  Copyright © 2017年 liushaohua. All rights reserved.
 //
 
-#import "UIView+LLMediaExt.h"
+#import "UIView+LLExtension.h"
 
-@implementation UIView (LLMediaExt)
+@implementation UIView (LLExtension)
 
 #pragma mark - Setter
 
