@@ -1,30 +1,33 @@
 # LLImagePicker
 
-集本地图片、视频选取,展示,拍摄,录像于一体的并时刻回调用于上传的数据类型的多媒体框架
+集本地.网络图片、视频选取与展示,拍摄 ,录像于一体的并时刻回调用于上传的数据类型的框架
 
 ![LLImagePickerGif.gif](https://github.com/liuniuliuniu/LLImagePickerView/blob/master/LLImagePickerView.gif)
 
 ## 目录
+* [Version](#version)
 * [功能实现](#function)
 * [如何添加](#add)
 * [使用介绍](#detail)
 * [更多自定义操作](#custom)
-* [Version](#version)
 * [Hope](#hope)
 
 
-## <a id="Requirements"></a>基本要求
 
-* iOS 8.0  or later
+### <a id="Version"></a>Version
+* 1.0.1 大版本的更改,更改初始化方法,增加每行显示图片个数的接口,更加容易适配各种需求
 
-* 用到GitHub上第三方：[TZImagePickerController](https://github.com/banchichen/TZImagePickerController)和[MWPhotoBrowser](https://github.com/mwaterfall/MWPhotoBrowser)
+* 0.0.3 修复嵌套多层控制器时 pop 出现的bug 
 
+* 0.0.2 指定依赖库版本 修复部分加载图片Bundle的问题
+
+* 0.0.1 支持cocoapod 并且修复了present控制器的bug,以及图片错乱的问题
 
 ## <a id="function"></a>功能实现
 
 * 图片多选及单选,视频多选及单选
 * 时刻回调出媒体数据用于上传
-* 直接对图片以及视频进行展示
+* 直接对图片和视频预览
 * 多种属性自定义：
 	* 媒体类型
 	* 删除、限定最大选择数数量
@@ -34,6 +37,8 @@
 	* 选择图片视图的背景颜色
 
 ## <a id="add"></a>如何添加
+
+iOS 8.0  or later
 
 * 支持cocoapod
 
@@ -58,7 +63,7 @@
 
 ```
  LLImagePickerView *pickerV = [LLImagePickerView ImagePickerViewWithFrame:CGRectMake(0, 70, [UIScreen mainScreen].bounds.size.width, 0) CountOfRow:3];
-    
+   
 ```
 
 
@@ -111,10 +116,8 @@ NSLog(@"%@",model.imageUrlString);
 ### <a id="custom"></a>更多自定义操作
 
 
-* **`preShowMedias`** 预先展示的媒体数组。如果一开始有需要显示媒体资源，可以先传入进行显示，没有的话可以不赋值。
-传入的如果是图片类型，则可以是：UIImage，NSString，至于其他的都可以传入 LLImagePickerModel类型
-包括网络图片和gif图片
-
+* **`preShowMedias`** 可以作为图片预览框架先行传入数据,传入的数据可以是：UIImage，NSString，至于其他的也可以传入 LLImagePickerModel类型
+事先对LLImagePickerModel 的属性赋值即可
 
 ```
 在预览或者之前已经有图片的情况下，需要传入进行预先展示
@@ -122,8 +125,7 @@ pickerV.preShowMedias = @[@"4",@"1",@"http://s1.dwstatic.com/group1/M00/AA/B8/b9
 ```
 
 
-* **`maxImageSelected`** 最大图片、视频选择个数，包括 `preShowMedias`的数量. default is 9
-
+* **`maxImageSelected`**图片、视频最多选择个数，包括事先展示的 `preShowMedias`的数量. default is 9
  
 ```
 自定义从本地相册中所选取的最大数量
@@ -166,15 +168,6 @@ pickerV.allowMultipleSelection = NO;
 * **`backgroundColor`** 底部collectionView的背景颜色，有特殊颜色要求的可以单独去设置
 
 
-### <a id="Version"></a>Version
-* 1.0.1 大版本的更改,更改初始化方法,增加每行显示图片个数的接口,更加容易适配各种需求
-
-* 0.0.3 修复嵌套多层控制器时 pop 出现的bug 
-
-* 0.0.2 指定依赖库版本 修复部分加载图片Bundle的问题
-
-* 0.0.1 支持cocoapod 并且修复了present控制器的bug,以及图片错乱的问题
-
 ------
 
 ## <a id="hope"></a>Hope
@@ -182,8 +175,3 @@ pickerV.allowMultipleSelection = NO;
 * 本人简书地址  也可随时在简书留言[LLImagePickerView](http://www.jianshu.com/p/54ef9f9f17e9)
 * 如果有更多建议或者想法也可以直接联系我 QQ:416997919
 * **期间感谢有几位朋友提出宝贵的意见让此框架更加完善 感谢**
-* 觉得框架对你有一点点帮助的，就请支持下，点个赞。
-
-## Licenses
-All source code is licensed under the MIT License.
-
